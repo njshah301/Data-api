@@ -4,6 +4,7 @@ public class TopicDto {
 	private String topicId;
 	private String topicName;
 	private String topicDescription;
+	
 	public String getTopicId() {
 		return topicId;
 	}

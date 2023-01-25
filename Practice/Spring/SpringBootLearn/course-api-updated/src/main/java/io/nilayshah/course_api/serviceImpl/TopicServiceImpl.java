@@ -13,7 +13,7 @@ import io.nilayshah.course_api.repositories.TopicRepository;
 import io.nilayshah.course_api.service.TopicService;
 
 @Service
-public class TopicImpl implements TopicService {
+public class TopicServiceImpl implements TopicService {
 	
 	@Autowired
 	private TopicRepository topicRepository;
@@ -23,9 +23,8 @@ public class TopicImpl implements TopicService {
 	
 	public TopicDto TopicEntityToDto(Topic topic)
 	{
-		TopicDto topicDto=new TopicDto();
-		topicDto = modelMapper.map(topic, TopicDto.class);
-		return topicDto;
+		return modelMapper.map(topic, TopicDto.class);
+		
 	}
 	
 	List<TopicDto> topicDto=new ArrayList<TopicDto> ();
@@ -42,9 +41,8 @@ public class TopicImpl implements TopicService {
 	
 	public Topic TopicDtoToEntity(TopicDto topicDto)
 	{
-		Topic topic = new Topic();
-		topic = modelMapper.map(topicDto, Topic.class);
-		return topic;
+		return modelMapper.map(topicDto, Topic.class);
+		
 	}
 	
 	
